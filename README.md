@@ -2,10 +2,12 @@
 
 **Table of Contents**
 * [node-docker](#node-docker)
+  * [Setup](#setup)
   * [Usage](#usage)
+  * [Debug in VSCode](#debug-in-vscode)
   * [Further reading](#further-reading)
 
-## Usage
+## Setup
 * Start the Node.js app in Docker
     ```bash
     # build the image
@@ -17,11 +19,14 @@
     # tail the last 50 lines of logs
     docker-compose logs -tf --tail="50" node-docker
     ```
+
+## Usage
 * Send a command
     ```bash
     curl --request POST --url http://localhost:8000/test --header 'content-type: application/json' --data '{"msg": "testing" }'
     ```
-* Debug in VSCode
+
+## Debug in VSCode
 * Select the Docker extension on the left-hand toolbar
 * Under containers, right click the `node_docker_node_docker` (awkward, I know) container
   * Attach Visual Studio Code > Hit enter to select the same container in the popup menu
@@ -30,11 +35,12 @@
   * Choose `/app` as the directory
     ![](img/open_folder.png)
 * Select the `server.js` file in Explorer on the left-hand side
-* On the status bar at the bottom, select Run Current File
-  * Choose `Node.js...`
-  * Run Current File
-* Set a breakpoint
-![Profit](img/server.js_docker_wsl.png)
+* Run and Debug
+  * On the status bar at the bottom, select Run Current File
+    * Choose `Node.js...`
+    * Run Current File
+  * Set a breakpoint
+    ![Profit](img/server.js_docker_wsl.png)
 
 ## Further reading
 [Build your Node image | Docker Documentation](https://docs.docker.com/language/nodejs/build-images/)
