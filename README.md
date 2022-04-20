@@ -25,13 +25,16 @@
 * Select the Docker extension on the left-hand toolbar
 * Under containers, right click the `node_docker_node_docker` (awkward, I know) container
   * Attach Visual Studio Code > Hit enter to select the same container in the popup menu
-* A new VSCode window appears inside of the Docker container app directory
+* A new VSCode window appears inside of the Docker container root directory
+  * Selct Open Folder in Explorer on the left-hand column
+  * Choose `/app` as the directory
+    ![](img/open_folder.png)
 * Select the `server.js` file in Explorer on the left-hand side
 * On the status bar at the bottom, select Run Current File
   * Choose `Node.js...`
   * Run Current File
 * Set a breakpoint
-![Profit](server.js_docker_wsl.png)
+![Profit](img/server.js_docker_wsl.png)
 
 ## Further reading
 [Build your Node image | Docker Documentation](https://docs.docker.com/language/nodejs/build-images/)
